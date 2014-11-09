@@ -13,6 +13,8 @@ A shortcode which shows an gallery of downloadeble images
 == Description ==
 
 A shortcode which shows an gallery of downloadable images. The basic idea was to have an easy way to make some images available for download.
+For a working demo see: http://plugins.svn.wordpress.org/downloadable-gallery/
+
 
 = shortcode =
 
@@ -43,8 +45,6 @@ I wanted to share some of my work as wallpaper and needed a simple and easy way 
 == Screenshots ==
 
 1. preview
-
-but for a working demo see: http://www.funsite.eu/downloadable-wallpapers/
 
 == Changelog ==
 
