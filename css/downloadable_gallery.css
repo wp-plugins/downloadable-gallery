@@ -1,0 +1,28 @@
+.downloadable_gallery {
+	overflow: auto;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.downloadable_gallery a {
+	display:block;
+	position:relative;
+	float:left;
+	margin: 2px;
+}
+
+.downloadable_gallery a img {
+	opacity: 0.8;
+}
+
+.downloadable_gallery a:hover img {
+	opacity: 1.0 !important;
+}
+
+.downloadable_gallery .overlay {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 1.5em;
+	color: white;
+}
