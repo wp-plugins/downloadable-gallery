@@ -4,7 +4,7 @@
  * @version 1.0
  */
 /*
-Plugin Name: downloadable_gallery
+Plugin Name: downloadable gallery
 Plugin URI: http://www.funsite.eu/downloadable_gallery
 Description: A shortcode which shows an gallery of downloadable images
 Author: Gerhard Hoogterp
