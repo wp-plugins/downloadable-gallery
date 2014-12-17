@@ -4,7 +4,7 @@
  * @version 1.0
  */
 /*
-Plugin Name: downloadable_gallery
+Plugin Name: downloadable gallery
 Plugin URI: http://www.funsite.eu/downloadable_gallery
 Description: A shortcode which shows an gallery of downloadable images
 Author: Gerhard Hoogterp
@@ -53,6 +53,19 @@ function downloadable_images_style() {
 	wp_enqueue_style( "downloadable_gallery_font",plugins_url('css/fontello.css', __FILE__));
 	wp_enqueue_style( "downloadable_gallery",plugins_url('css/downloadable_gallery.css', __FILE__));
 }
+
+
+/* -------------------------------------------------------------------------------------- */
+function downloadable_gallery_PluginLinks($links, $file) {
+		$base = plugin_basename(__FILE__);
+		if ($file == $base) {
+			$links[] = '<a href="https://wordpress.org/support/view/plugin-reviews/downloadable-gallery">' . __('A review would be appriciated.','wp_widget_plugin') . '</a>';
+		}
+		return $links;
+	}
+
+add_filter('plugin_row_meta', 'downloadable_gallery_PluginLinks',10,2);
+
 add_action( 'wp_enqueue_scripts', 'downloadable_images_style' );
 
 // Define a custom size
