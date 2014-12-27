@@ -23,6 +23,14 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	font-size: 1.5em;
+	font-size: 2em;
 	color: white;
+}
+
+.download-icon:before {
+	content: "\f242";
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 1.5em/1 'dashicons';
+	vertical-align: top;
 }
