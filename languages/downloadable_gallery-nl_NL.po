@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: downloadable gallery v1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-12-27 22:10:26+0000\n"
+"PO-Revision-Date: 2014-12-29 21:52:04+0000\n"
 "Last-Translator: admin <admin@funsite.eu>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,14 +20,14 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: downloadable_gallery.php:58
-#: downloadable_gallery.php:59
+#: downloadable_gallery.php:55
+#: downloadable_gallery.php:56
 #@ downloadable_gallery
 msgid "Download for free"
 msgstr "Gratis download!"
 
-#: downloadable_gallery.php:77
+#: downloadable_gallery.php:74
 #@ downloadable_gallery
-msgid "A review would be appriciated."
-msgstr "Een review wordt op prijs gesteld."
+msgid "Please rate me."
+msgstr "'Rate' me alstublieft."
 

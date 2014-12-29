@@ -4,7 +4,7 @@ Donate link: http://www.funsite.eu/downloadable-wallpapers/
 Tags: images,gallery,show,shortcode,downloadable
 Requires at least: 3.0.1
 Tested up to: 4.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,9 @@ I wanted to share some of my work as wallpaper and needed a simple and easy way 
 1. preview
 
 == Changelog ==
+= 1.2 =
+ fixed some minor bugs
+
 = 1.1 =
 - rewrote the plugin to a classbased version avoiding clashes with other plugins
 - made it translatable and added a dutch translation

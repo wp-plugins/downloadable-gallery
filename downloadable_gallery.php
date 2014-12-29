@@ -1,20 +1,21 @@
 <?php
 /**
  * @package downloadable_gallery
- * @version 1.1
+ * @version 1.2
  */
 /*
 Plugin Name: downloadable gallery
 Plugin URI: http://www.funsite.eu/downloadable_gallery
 Description: A shortcode which shows an gallery of downloadable images
 Author: Gerhard Hoogterp
-Version: 1.1
+Version: 1.2
 Author URI: http://www.funsite.eu/
 */
 
-class downloadable_gallery {
+class downloadable_gallery_class {
 
 	const FS_TEXTDOMAIN = 'downloadable_gallery';
+	const FS_PLUGINNAME = 'downloadable-gallery';
 	
     public function __construct() {
    		add_action('init', array($this,'myTextDomain'));
@@ -70,7 +71,7 @@ class downloadable_gallery {
 	function downloadable_gallery_PluginLinks($links, $file) {
 		$base = plugin_basename(__FILE__);
 		if ($file == $base) {
-			$links[] = '<a href="https://wordpress.org/support/view/plugin-reviews/downloadable-gallery">' . __('A review would be appriciated.',self::FS_TEXTDOMAIN) . '</a>';
+			$links[] = '<a href="https://wordpress.org/support/view/plugin-reviews/'.self::FS_PLUGINNAME.'#postform">' . __('Please rate me.',self::FS_TEXTDOMAIN) . '</a>';
 		}
 		return $links;
 	}
@@ -85,6 +86,6 @@ class downloadable_gallery {
 	
 }
 
-$downloadable_gallery = new downloadable_gallery();
+$downloadable_gallery = new downloadable_gallery_class();
 
 ?>
