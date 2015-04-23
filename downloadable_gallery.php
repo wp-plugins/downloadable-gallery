@@ -12,14 +12,18 @@ Version: 1.2
 Author URI: http://www.funsite.eu/
 */
 
-class downloadable_gallery_class {
+if (!class_exists('basic_plugin_class')) {
+	require(plugin_dir_path(__FILE__).'basics/basic_plugin.class');
+}
 
-	const FS_TEXTDOMAIN = 'downloadable_gallery';
-	const FS_PLUGINNAME = 'downloadable-gallery';
-	
-    public function __construct() {
-   		add_action('init', array($this,'myTextDomain'));
-		add_filter('plugin_row_meta', array($this,'downloadable_gallery_PluginLinks'),10,2);
+class downloadable_gallery_class  extends basic_plugin_class {
+
+	function getPluginBaseName() { return plugin_basename(__FILE__); }
+	function getChildClassName() { return get_class($this); }
+
+	public function __construct() {
+		parent::__construct();
+		
 		add_action( 'wp_enqueue_scripts', array($this,'downloadable_images_style') );
 		// Define a custom size
 		add_image_size( 'downloadableThumb', 300);
@@ -27,6 +31,11 @@ class downloadable_gallery_class {
 		add_shortcode( 'downloadable_images', array($this,'downloadable_images') );
 	}
 
+	function pluginInfoRight($info) {  }
+	
+	const FS_TEXTDOMAIN = 'downloadable_gallery';
+	const FS_PLUGINNAME = 'downloadable-gallery';
+	
 	
 	function downloadable_images( $atts ) {
 		$res = '';
@@ -66,24 +75,6 @@ class downloadable_gallery_class {
 		wp_enqueue_style( "downloadable_gallery",plugins_url('css/downloadable_gallery.css', __FILE__));
 	}
 
-
-	/* -------------------------------------------------------------------------------------- */
-	function downloadable_gallery_PluginLinks($links, $file) {
-		$base = plugin_basename(__FILE__);
-		if ($file == $base) {
-			$links[] = '<a href="https://wordpress.org/support/view/plugin-reviews/'.self::FS_PLUGINNAME.'#postform">' . __('Please rate me.',self::FS_TEXTDOMAIN) . '</a>';
-		}
-		return $links;
-	}
-
-	function myTextDomain() {
-		$ok=load_plugin_textdomain(
-			self::FS_TEXTDOMAIN,
-			false,
-			dirname(plugin_basename(__FILE__)).'/languages/'
-		);
-	}
-	
 }
 
 $downloadable_gallery = new downloadable_gallery_class();
