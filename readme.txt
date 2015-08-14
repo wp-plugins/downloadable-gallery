@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: jondor
-Donate link: http://www.funsite.eu/downloadable-wallpapers/
+Donate link: http://plugins.funsite.eu/downloadable-gallerie/
 Tags: images,gallery,show,shortcode,downloadable
 Requires at least: 3.0.1
 Tested up to: 4.2
