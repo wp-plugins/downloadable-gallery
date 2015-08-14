@@ -5,11 +5,11 @@
  */
 /*
 Plugin Name: downloadable gallery
-Plugin URI: http://www.funsite.eu/downloadable_gallery
+Plugin URI: http://plugins.funsite.eu/downloadable-gallerie/
 Description: A shortcode which shows an gallery of downloadable images
 Author: Gerhard Hoogterp
 Version: 1.2
-Author URI: http://www.funsite.eu/
+Author URI: http://plugins.funsite.eu/downloadable-gallerie/
 */
 
 if (!class_exists('basic_plugin_class')) {
